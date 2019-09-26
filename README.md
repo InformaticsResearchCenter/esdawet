@@ -15,16 +15,18 @@ import time
 sending     = bakwan.Bakwan()  
 getNilai    = dawet.Dawet("Filename in Google Spreadsheet")  
 getWa       = dawet.Dawet("Filename in Google Spreadsheet")  
-  
-#get data wa_ortu, npm, name  
-wanumortu   	= getWa.getData("row name", "column name", 0)  
-wanumpem    	= getWa.getData("row name", "column name", 0)  
-npmnum      	= getWa.getData("row name", "column name", 0)  
-name        	= getWa.getData("row name", "column name", 0) 
+
+worksheet_number= 0
+
+#get data wa_ortu, npm, name
+wanumortu   	= getWa.getData("row name", "column name", worksheet_number)  
+wanumpem    	= getWa.getData("row name", "column name", worksheet_number)
+npmnum      	= getWa.getData("row name", "column name", worksheet_number)
+name        	= getWa.getData("row name", "column name", worksheet_number)
 truemessage 	= "Anak anda dengan npm : " + npmnum + " " + name + " belum melaksanakan bimbingan!" 
 falsemessage	= "Anak anda dengan npm : " + npmnum + " " + name + " telah melaksanakan bimbingan!"
   
-if getNilai.getData("row name", "column name", 0) == "0":  
+if getNilai.getData("row name", "column name", worksheet_number) == "0":  
     #sending message  
     sending.sendNumber(wanumortu, truemessage)  
     time.sleep(1)  
