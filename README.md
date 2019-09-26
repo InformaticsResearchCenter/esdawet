@@ -38,4 +38,4 @@ else:
 
 # NOTE!!
 1. add your **client_secret.json** for google spreadsheet api
-2. create **lib** directory then create **\__init_\_.py** file in **lib** directory, then put **bakwan.py** and **dawet.py** to **lib** directory
+2. create **lib** directory then create **\_\_init\_\_.py** file in **lib** directory, then put **bakwan.py** and **dawet.py** to **lib** directory
