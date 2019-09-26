@@ -13,8 +13,8 @@ from lib import dawet, bakwan
 import time  
   
 sending     = bakwan.Bakwan()  
-getNilai    = dawet.Dawet("2019Proyek2")  
-getWa       = dawet.Dawet("datamahasiswa")  
+getNilai    = dawet.Dawet("Filename in Google Spreadsheet")  
+getWa       = dawet.Dawet("Filename in Google Spreadsheet")  
   
 #get data wa_ortu, npm, name  
 wanumortu   	= getWa.getData("row name", "column name", 0)  
