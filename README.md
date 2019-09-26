@@ -24,7 +24,7 @@ name        	= getWa.getData("row name", "column name", 0)
 truemessage 	= "Anak anda dengan npm : " + npmnum + " " + name + " belum melaksanakan bimbingan!" 
 falsemessage	= "Anak anda dengan npm : " + npmnum + " " + name + " telah melaksanakan bimbingan!"
   
-if getNilai.getData("row name", "column name", 0) == 0:  
+if getNilai.getData("row name", "column name", 0) == "0":  
     #sending message  
     sending.sendNumber(wanumortu, truemessage)  
     time.sleep(1)  
