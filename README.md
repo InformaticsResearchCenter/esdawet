@@ -9,9 +9,10 @@ pip install -r requirements.txt
 # How to use
 to using this program : 
 ```python
-from lib import dawet, bakwan  
+from lib import dawet, bakwan, mietektek
 import time  
-  
+
+meet = mietektek.Mietektek()
 sending     = bakwan.Bakwan()  
 getNilai    = dawet.Dawet("Filename in Google Spreadsheet")  
 getWa       = dawet.Dawet("Filename in Google Spreadsheet")  
@@ -25,7 +26,11 @@ npmnum      	= getWa.getData("row name", "column name", worksheet_number)
 name        	= getWa.getData("row name", "column name", worksheet_number)
 truemessage 	= "Anak anda dengan npm : " + npmnum + " " + name + " belum melaksanakan bimbingan!" 
 falsemessage	= "Anak anda dengan npm : " + npmnum + " " + name + " telah melaksanakan bimbingan!"
-  
+
+meet_for_guidance = "column name"
+guidance_meet = meet.Bimbingan(meet_for_guidance)
+getValue    = getNilai.getData("row name", meet_for_guidance, worksheet_number)
+
 if getNilai.getData("row name", "column name", worksheet_number) == "0":  
     #sending message  
     sending.sendNumber(wanumortu, truemessage)  
@@ -40,4 +45,4 @@ else:
 
 # NOTE!!
 1. add your **client_secret.json** for google spreadsheet api
-2. create **lib** directory then create **\_\_init\_\_.py** file in **lib** directory, then put **bakwan.py** and **dawet.py** to **lib** directory
+2. create **lib** directory then create **\_\_init\_\_.py** file in **lib** directory, then put **bakwan.py**, **dawet.py**, and **mietektek.py** to **lib** directory
